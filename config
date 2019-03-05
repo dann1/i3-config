@@ -22,7 +22,7 @@ floating_modifier $mod
 #floating_maximum_size 1366x768
 
 # Mouse doesn't mess with focus
-focus_follows_mouse no
+focus_follows_mouse yes
 
 # start a terminal
 bindsym $mod+Return exec xfce4-terminal
