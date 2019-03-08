@@ -45,9 +45,8 @@ bindsym XF86AudioMute exec ~/.i3/scripts/mute.sh
 bindsym XF86TouchpadToggle exec toggletouchpad # toggle touchpad
 
 # Start Applications
-bindsym Print exec --no-startup-id i3-scrot
-bindsym $mod+Print exec --no-startup-id scrotclip
-bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s
+bindsym Print exec ~/.i3/scripts/ballsack w
+bindsym $mod+Print --release exec ~/.i3/scripts/ballsack s
 
 # Switch between windows
 bindsym $mod+Left focus left
