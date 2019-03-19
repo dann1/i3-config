@@ -32,7 +32,7 @@ bindsym $mod+Shift+q kill
 
 # start program launcher
 bindsym $mod+d exec rofi -show drun -show-icons
-bindsym $mod+c exec "rofi -show calc -modi calc -no-show-match -no-sort"
+bindsym $mod+c exec rofi -show calc -modi calc -no-show-match -no-sort
 
 ###########################################################################################
 
