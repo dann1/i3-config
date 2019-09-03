@@ -15,6 +15,9 @@ hide_edge_borders smart
 # is used in the bar {} block below.
 font pango:Noto Sans, Awesome 13
 
+# Determines the window title’s text alignment
+title_align center
+
 # Use Mouse+$mod to drag floating windows
 floating_modifier $mod
 
@@ -256,7 +259,7 @@ exec --no-startup-id chromium
 exec --no-startup-id slack
 exec --no-startup-id franz
 exec --no-startup-id greenclip daemon
-exec --no-startup-id steam
+#exec --no-startup-id steam
 exec --no-startup-id telegram-desktop
 exec --no-startup-id pcmanfm -d
 
