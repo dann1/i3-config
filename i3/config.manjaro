@@ -113,26 +113,8 @@ set $ws7 7: 
 set $ws9 9: 
 set $ws0 0: 
 
-workspace 1 output HDMI1 eDP1 DP1
-workspace 2 output HDMI1 eDP1 DP1
-workspace 3 output HDMI1 eDP1 DP1
-workspace 4 output HDMI1 eDP1 DP1
-workspace 5 output HDMI1 eDP1 DP1
-workspace 6 output HDMI1 eDP1 DP1
-workspace 7 output HDMI1 eDP1 DP1
-workspace 8 output HDMI1 eDP1 DP1
-workspace 9 output HDMI1 eDP1 DP1
-
-#workspace 2 output HDMI1 eDP1
-#workspace 3 output HDMI1 eDP1
-#workspace 4 output HDMI1 eDP1
-#workspace 6 output HDMI1 eDP1
-#workspace 7 output HDMI1 eDP1
-
 # Open applications on specific workspaces
 assign [class="Chromium"] $ws1
-#assign [class="Steam"] $ws7
-#assign [class="dota2"] $ws7
 for_window [class="Slack"] move to workspace $ws0, layout tabbed
 for_window [class="Franz"] move to workspace $ws0, layout tabbed
 for_window [class="TelegramDesktop"] move to workspace $ws0, layout tabbed
@@ -244,14 +226,13 @@ mode "resize" {
 
 
 # Autostart applications
-exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+#exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id nitrogen --restore; sleep 1; compton -b
 exec --no-startup-id blueman-applet
 exec --no-startup-id nm-applet
 exec --no-startup-id xfce4-power-manager
-exec --no-startup-id xautolock -time 10 -locker i3lock -i ~/Pictures/bsod.png
-exec_always --no-startup-id ff-theme-util
-exec_always --no-startup-id fix_xcursor
+#exec_always --no-startup-id ff-theme-util
+#exec_always --no-startup-id fix_xcursor
 
 # User Apps
 exec --no-startup-id chromium
@@ -294,10 +275,11 @@ set_from_resource $term_color15    color15
 
 # Start i3bar to display a workspace bar (plus the system information i3status if available)
 bar {
-	i3bar_command i3bar
-	status_command i3blocks
+	#i3bar_command i3bar
+	status_command i3status
 	position top
-	modifier none
+	#modifier none
+	mode hide
 	output eDP1
 	tray_output eDP1
 	bindsym button4 nop
